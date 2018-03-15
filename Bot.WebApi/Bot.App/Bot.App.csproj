@@ -53,9 +53,12 @@
     <Compile Include="Commands\Hello\IHelloCommand.cs" />
     <Compile Include="Commands\TestPost\ITestPostCommand.cs" />
     <Compile Include="Commands\TestPost\TestPostCommand.cs" />
+    <Compile Include="Events\EventsProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestProcessors\Command\CommandsProcessor.cs" />
     <Compile Include="RequestProcessors\Command\CommandsRequestProcessor.cs" />
+    <Compile Include="RequestProcessors\Command\MainCommandsRequestProcessor.cs" />
+    <Compile Include="RequestProcessors\Events\EventsRequestProcessor.cs" />
+    <Compile Include="RequestProcessors\Events\MainEventsRequestProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

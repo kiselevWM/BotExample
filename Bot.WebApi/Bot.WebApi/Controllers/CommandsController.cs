@@ -13,8 +13,8 @@ namespace Bot.WebApi.Controllers
 		[HttpPost]
 		public async Task<IHttpActionResult> Exec([FromBody]JToken content)
 		{
-			var resp = await new CommandsRequestProcessor(new AuthService(), 
-				new CommandsProcessor(new HelloCommand(), new TestPostCommand(), Properties.Settings.Default.Token)).ProcessAsync(content.ToString());
+			var resp = await new MainCommandsRequestProcessor(new AuthService(), 
+				new CommandsRequestProcessor(new HelloCommand(), new TestPostCommand(), Properties.Settings.Default.Token)).ProcessAsync(content.ToString());
 			return this.JsonString(resp);
 		}
 	}
