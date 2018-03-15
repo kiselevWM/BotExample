@@ -41,7 +41,7 @@ namespace Bot.App.Events
 								new AttachmentEntityActionCreateForm
 								{
 									type = AttachmentEntityActionType.Button,
-									uid = "yourUid",
+									uid = "yourUid1",
 									data = new AttachmentEntityActionButtonView
 									{
 										style = AttachmentEntityActionButtonStyle.Normal,
