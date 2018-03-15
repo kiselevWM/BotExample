@@ -1,5 +1,8 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Http;
+using Bot.App.Commands.Hello;
+using Bot.App.Commands.TestPost;
+using Bot.App.RequestProcessors.Command;
 using Bot.WebApi.Tools;
 using Newtonsoft.Json.Linq;
 
@@ -10,7 +13,8 @@ namespace Bot.WebApi.Controllers
 		[HttpPost]
 		public async Task<IHttpActionResult> Exec([FromBody]JToken content)
 		{
-			var resp = string.Empty;// await _commandRequestProcessor.ProcessAsync(content.ToString());
+			var resp = await new CommandsRequestProcessor(new AuthService(), 
+				new CommandsProcessor(new HelloCommand(), new TestPostCommand(), Properties.Settings.Default.Token)).ProcessAsync(content.ToString());
 			return this.JsonString(resp);
 		}
 	}
