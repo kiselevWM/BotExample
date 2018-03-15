@@ -1,10 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Bots.ApiLayer.Api.Discuss;
+using Bots.ApiLayer.Api.Message;
 using Bots.ApiLayer.Models.AttachmentEntity;
 using Bots.ApiLayer.Models.AttachmentEntity.Forms;
 using Bots.ApiLayer.Models.AttachmentEntity.Views;
+using Bots.ApiLayer.Models.Message.Forms;
+using Bots.ApiLayer.Models.Post;
 using Bots.Common.ExternelModels.Requests.BotEvents;
 using Bots.Common.ExternelModels.Requests.BotEvents.PostGroupDiscuss;
+using Bots.Common.ExternelModels.Requests.BotEvents.PostGroupEvent;
 using Bots.Common.ExternelModels.Responses.BotEvents;
 using Bots.Common.ExternelModels.Responses.BotEvents.PostGroupDiscuss;
 using Bots.Common.RequestProcessors.Events;
@@ -52,6 +57,16 @@ namespace Bot.App.Events
 						}
 					}
 				}, request.token));
+		}
+
+		public override async Task<BaseEventsBotResponse<PostGroupDicussResponse>> ProcessAsync(BaseEventsBotRequest<PostGroupEventRequest> arg)
+		{
+			await new MessageApi("0a2a7a267d054873aa2ab2cecd11b2df").BotPostAsync(new BotPostMessageForm
+			{
+				postText = arg.request.message,
+				corsWmid = new List<string>{"980447418764"}
+			});
+			return null;
 		}
 
 		//override the other events
