@@ -61,10 +61,10 @@ namespace Bot.App.Events
 
 		public override async Task<BaseEventsBotResponse<PostGroupDicussResponse>> ProcessAsync(BaseEventsBotRequest<PostGroupEventRequest> arg)
 		{
-			await new MessageApi("0a2a7a267d054873aa2ab2cecd11b2df").BotPostAsync(new BotPostMessageForm
+			await new MessageApi("botToken").BotPostAsync(new BotPostMessageForm
 			{
 				postText = arg.request.message,
-				corsWmid = new List<string>{"your wmid"}
+				corsWmid = new List<string>{"wmid"}
 			});
 			return null;
 		}

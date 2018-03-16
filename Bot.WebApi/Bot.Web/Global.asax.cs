@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 
-namespace Bot.WebApi
+namespace Bot.Web
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

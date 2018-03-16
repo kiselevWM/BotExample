@@ -2,10 +2,10 @@
 using System.Web.Http;
 using Bot.App.Actions.Test;
 using Bot.App.RequestProcessors.Actions;
-using Bot.WebApi.Tools;
+using Bot.Web.Tools;
 using Newtonsoft.Json.Linq;
 
-namespace Bot.WebApi.Controllers
+namespace Bot.Web.Controllers
 {
 	public class ActionsController: ApiController
 	{

@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace Bot.WebApi.Tools
+namespace Bot.Web.Tools
 {
 	public static class JsonStringResultExtension
 	{

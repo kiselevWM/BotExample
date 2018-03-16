@@ -3,10 +3,10 @@ using System.Web.Http;
 using Bot.App.Commands.Hello;
 using Bot.App.Commands.TestPost;
 using Bot.App.RequestProcessors.Command;
-using Bot.WebApi.Tools;
+using Bot.Web.Tools;
 using Newtonsoft.Json.Linq;
 
-namespace Bot.WebApi.Controllers
+namespace Bot.Web.Controllers
 {
 	public class CommandsController: ApiController
 	{
