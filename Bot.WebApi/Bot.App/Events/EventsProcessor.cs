@@ -64,7 +64,7 @@ namespace Bot.App.Events
 			await new MessageApi("0a2a7a267d054873aa2ab2cecd11b2df").BotPostAsync(new BotPostMessageForm
 			{
 				postText = arg.request.message,
-				corsWmid = new List<string>{"980447418764"}
+				corsWmid = new List<string>{"your wmid"}
 			});
 			return null;
 		}
