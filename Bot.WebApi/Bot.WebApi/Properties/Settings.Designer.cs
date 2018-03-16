@@ -25,7 +25,7 @@ namespace Bot.WebApi.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Bot token from events")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0a2a7a267d054873aa2ab2cecd11b2df")]
         public string Token {
             get {
                 return ((string)(this["Token"]));

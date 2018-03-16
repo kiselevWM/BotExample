@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Token" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Bot token from events</Value>
+      <Value Profile="(Default)">0a2a7a267d054873aa2ab2cecd11b2df</Value>
     </Setting>
   </Settings>
 </SettingsFile>
