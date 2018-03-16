@@ -4,7 +4,7 @@ namespace Bot.App.RequestProcessors.Events
 {
 	public class EventsRequestProcessor: BaseEventsRequestProcessor
 	{
-		public EventsRequestProcessor(IEventsProcessor eventsProcessor, string botToken) : base(eventsProcessor, botToken)
+		public EventsRequestProcessor(IEventsProcessor eventsProcessor) : base(eventsProcessor)
 		{
 		}
 	}

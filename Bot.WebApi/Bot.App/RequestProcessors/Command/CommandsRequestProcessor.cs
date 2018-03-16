@@ -8,8 +8,8 @@ namespace Bot.App.RequestProcessors.Command
 {
 	public class CommandsRequestProcessor: BaseCommandRequestProcessor
 	{
-		public CommandsRequestProcessor(IHelloCommand helloCommand, ITestPostCommand testPostCommand, string botToken) 
-			: base(new List<ICommand>{helloCommand, testPostCommand}, botToken)
+		public CommandsRequestProcessor(IHelloCommand helloCommand, ITestPostCommand testPostCommand) 
+			: base(new List<ICommand>{helloCommand, testPostCommand})
 		{
 		}
 	}

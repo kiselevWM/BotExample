@@ -13,7 +13,7 @@ namespace Bot.WebApi.Controllers
 		public async Task<IHttpActionResult> Exec([FromBody] JToken content)
 		{
 			var resp = await new MainActionsRequestProcessor(new AuthService(), 
-				new ActionsRequestProcessor(new TestActionProcessor(), Properties.Settings.Default.Token)).ProcessAsync(content.ToString());
+				new ActionsRequestProcessor(new TestActionProcessor())).ProcessAsync(content.ToString());
 			return this.JsonString(resp);
 		}
 	}

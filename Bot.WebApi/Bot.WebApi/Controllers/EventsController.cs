@@ -12,8 +12,7 @@ namespace Bot.WebApi.Controllers
 		[HttpPost]
         public async Task<IHttpActionResult> Fire([FromBody]JToken content)
 		{
-			var resp = await new MainEventsRequestProcessor(new AuthService(),
-					new EventsRequestProcessor(new EventsProcessor(), Properties.Settings.Default.Token))
+			var resp = await new MainEventsRequestProcessor(new AuthService(), new EventsRequestProcessor(new EventsProcessor()))
 				.ProcessAsync(content.ToString());
             return this.JsonString(resp);
         }
